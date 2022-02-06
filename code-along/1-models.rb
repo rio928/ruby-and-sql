@@ -14,7 +14,7 @@ puts Company.all.count
 puts "There are now #{Company.all.count} companies."
 
 # 2. create new companies
-values={ name:"Apple, Inc" ,
+values={ name:"Apple, Inc." ,
          url:"https://apple.com",
          city:"Cuperito",
          state:"CA"}
@@ -22,7 +22,7 @@ values={ name:"Apple, Inc" ,
 apple=Company.new(values)
 apple.save
 
-values={ name:"Amazon.com, Inc" ,
+values={ name:"Amazon.com, Inc." ,
          url:"https://amazon.com",
          city:"Seattle",
          state:"WA"}
@@ -55,7 +55,7 @@ california_company.save
 puts california_company.inspect
 
 new_company=Company.new
-new_company.name="Tesla"
+new_company.name="Tesla, Inc."
 new_company.url="https://tesla.com"
 new_company.city="Palo Alto"
 new_company.state="CA"
@@ -63,3 +63,5 @@ new_company.save
 
 puts new_company.inspect
 puts "There are now #{Company.all.count} companies."
+
+puts Company.where({state:"CA"}).inspect
