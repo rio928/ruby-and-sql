@@ -24,6 +24,13 @@ Activity.destroy_all
 # Add the relevant associations to the models.
 
 # 5. Insert at least 2 activities into the activities table
+brian = Salesperson.where({first_name:"Brian",last_name:"Eng"})[0]
+contact = Contact.where ({first_name:"Tim",last_name:"Cook"})[0]
+
+
+
+ben = Salesperson.where({first_name:"Ben",last_name:"Block"})[0]
+contact = Contact.where ({first_name:"Elon",last_name:"Musk"})[0]
 
 
 # 6. Loop through the salespeople and display their activites and related contacts, e.g.:
