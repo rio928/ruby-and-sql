@@ -18,6 +18,20 @@ Salesperson.destroy_all
 # 3. add relevant columns to the db/migrate file:
 # first_name, last_name, email
 
+salesperson1 = Salesperson.new
+salesperson1.first_name = "Brian"
+salesperson1.last_name = "Eng"
+salesperson1.email = "brian@test.com"
+salesperson1.save
+
+salesperson2 = Salesperson.new
+salesperson2.first_name = "Ben"
+salesperson2.last_name = "Block"
+salesperson2.email = "ben@test.com"
+salesperson2.save
+
+puts salesperson1.inspect
+puts salesperson2.inspect
 # 4. execute the migration file. in terminal, run:
 # rails db:migrate
 
