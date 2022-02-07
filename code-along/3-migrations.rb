@@ -32,6 +32,7 @@ salesperson2.save
 
 puts salesperson1.inspect
 puts salesperson2.inspect
+
 # 4. execute the migration file. in terminal, run:
 # rails db:migrate
 
