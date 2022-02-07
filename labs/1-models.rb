@@ -12,6 +12,30 @@ Contact.destroy_all
 # 1b. check out the model file
 apple = Company.where({name:"Apple, Inc."})[0]
 puts apple.inspect
+puts apple.id
+
+values = {first_name: "Craig",
+          last_name: "Federighi",
+          email: "craig@apple.com",
+          phone_number: "555-888-1212",
+          company_id: apple.id}
+
+contact = Contact.new(values)
+contact.save
+puts contact.inspect
+
+amazon = Company.where({name:"Amazon.com, Inc."})[0]
+
+
+contact = Contact.new
+contact.first_name = "Andy"
+contact.last_name = "Jassy"
+contact.email = "andy@amazon.com"
+contact.phone_number = "888-555-1313"
+contact.company_id = amazon.id
+contact.save
+
+puts contact.inspect
 # 2. create 1-2 new contacts for each company (they can be made up)
 
 

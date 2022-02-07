@@ -14,20 +14,20 @@ puts Company.all.count
 puts "There are now #{Company.all.count} companies."
 
 # 2. create new companies
-values={ name:"Apple, Inc." ,
+values = { name:"Apple, Inc." ,
          url:"https://apple.com",
          city:"Cuperito",
          state:"CA"}
 
-apple=Company.new(values)
+apple = Company.new(values)
 apple.save
 
-values={ name:"Amazon.com, Inc." ,
+values = { name:"Amazon.com, Inc." ,
          url:"https://amazon.com",
          city:"Seattle",
          state:"WA"}
 
-amazon=Company.new(values)
+amazon = Company.new(values)
 amazon.save
 
 puts "There are now #{Company.all.count} companies."
