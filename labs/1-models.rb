@@ -14,8 +14,8 @@ Contact.destroy_all
 # 2. create 1-2 new contacts for each company (they can be made up)
 
 apple = Company.where({name:"Apple, Inc."})[0]
-puts apple.inspect
 puts apple.id
+apple_id = apple.id
 
 values = {first_name: "Craig",
           last_name: "Federighi",
@@ -35,7 +35,8 @@ contact.company_id = apple.id
 contact.save
 
 amazon = Company.where({name:"Amazon.com, Inc."})[0]
-
+puts amazon.id
+amazon_id = amazon.id
 
 contact = Contact.new
 contact.first_name = "Andy"
@@ -44,20 +45,23 @@ contact.email = "andy@amazon.com"
 contact.phone_number = "888-555-1313"
 contact.company_id = amazon.id
 contact.save
+ 
+tesla = Company.where({name:"Tesla, Inc."})[0]
+puts tesla.id
+tesla_id = tesla.id
 
 tesla = Contact.new 
 contact.first_name = "Elon"
 contact.last_name = "Musk"
 contact.email = "elon@tesla.com"
 contact.phone_number = "888-999-9999"
-contact.company_id = tesla.id
+contact.company_id = tesla_id
 contact.save
 
+
+
 puts contact.inspect
 
-
-
-puts contact.inspect
 
 # 3. write code to display how many contacts are in the database AND each contact's info (name, email), e.g.:
 

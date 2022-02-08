@@ -61,6 +61,8 @@ new_company.city="Palo Alto"
 new_company.state="CA"
 new_company.save
 
+
+
 puts new_company.inspect
 puts "There are now #{Company.all.count} companies."
 
