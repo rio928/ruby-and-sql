@@ -43,6 +43,8 @@ values = {
   contact_id: contact.id,
   note: "Liked a tweet"
 }
+activity = Activity.new(values)
+activity.save
 
 #brian = Salesperson.new( { first_name:"Brian", last_name:"Eng"} )
 #brian.save
@@ -63,6 +65,18 @@ values = {
 
 
 # 6. Loop through the salespeople and display their activites and related contacts, e.g.:
+
+salespeople = Salesperson.all
+for salesperson in salespeople
+    puts "#{salesperson.first_name} #{salesperson.last_name}"
+  
+    activities = salesperson.activities
+    for activity in activities
+      contact = activity.contact
+      puts "#{activity.note} - #{contact.first_name} #{contact.last_name}"
+    end
+  end
+
 
 # ---------------------------------
 # Brian Eng
